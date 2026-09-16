@@ -21,8 +21,31 @@
 <link rel="apple-touch-icon" href="images/she-blossoms-logo.png">
 <style>
   .my-card-page .maker {
-    padding-top: calc(5.8rem + clamp(44px, 6vw, 72px));
+    padding-top: calc(5.8rem + clamp(44px, 6vw, 72px))
   }
+
+    @media (max-width: 940px) {
+  .navbar .nav_menu-items {
+    display: none;
+  }
+
+  .navbar .nav_menu-items[data-open="true"] {
+    display: flex;
+  }
+
+  .navbar .nav_button {
+    display: flex;
+    color: var(--hibiscus);
+    background: var(--evergreen);
+    border: 1px solid var(--hibiscus);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .navbar .nav_button-line {
+    background-color: currentColor;
+  }
+}
 </style>
 </head>
 
@@ -46,7 +69,7 @@
           </div>
         </div>
       </nav>
-      <div id="burger" class="nav_button w-nav-button" aria-label="Open menu" aria-expanded="false">
+      <div id="burger" class="nav_button w-nav-button" aria-label="Open menu" aria-expanded="false" role="button" tabindex="0">
         <div class="nav_button-inner"><div class="nav_button-line is-top"></div><div class="nav_button-line is-middle"></div><div class="nav_button-line is-bottom"></div></div>
       </div>
     </div>

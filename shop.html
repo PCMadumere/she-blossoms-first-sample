@@ -10,6 +10,30 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/external-style.css">
+  <style>
+    @media (max-width: 940px) {
+  .navbar .nav_menu-items {
+    display: none;
+  }
+
+  .navbar .nav_menu-items[data-open="true"] {
+    display: flex;
+  }
+
+  .navbar .nav_button {
+    display: flex;
+    color: var(--hibiscus);
+    background: var(--evergreen);
+    border: 1px solid var(--hibiscus);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .navbar .nav_button-line {
+    background-color: currentColor;
+  }
+}
+  </style>
 </head>
 <body>
   <div class="nav-wrapper">
@@ -18,7 +42,7 @@
         <a href="index.html" class="nav_brand w-nav-brand">
           <div class="nav-logo-text"><img width="350" height="100" alt="She Blossoms" src="images/she-blossoms-logo.png" loading="lazy" class="nav_logo"></div>
         </a>
-        <nav role="navigation" class="nav_menu-items w-nav-menu">
+        <nav id="nav" role="navigation" class="nav_menu-items w-nav-menu">
           <div class="nav_menu-items-inner">
             <div class="nav_menu-link-wrap">
               <a href="index.html" class="nav_link w-inline-block"><div class="nav-text">Home</div></a>
@@ -28,7 +52,7 @@
             </div>
           </div>
         </nav>
-        <div class="nav_button w-nav-button" aria-label="Open menu">
+        <div id="burger" class="nav_button w-nav-button" aria-label="Open menu" aria-expanded="false" role="button" tabindex="0">
           <div class="nav_button-inner"><div class="nav_button-line is-top"></div><div class="nav_button-line is-middle"></div><div class="nav_button-line is-bottom"></div></div>
         </div>
       </div>
@@ -87,44 +111,40 @@
         </div>
         <div class="looks">
           <figure class="look group-look">
-            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=85" alt="Group of women together outdoors" loading="lazy">
+            <img src="images/four ladies.webp" alt="Group of women together outdoors" loading="lazy">
             <figcaption>One movement. Many stories. The She Blossoms sisterhood together.</figcaption>
           </figure>
           <figure class="look">
-            <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=900&q=85" alt="Woman wearing a coordinated fashion outfit" loading="lazy">
+            <img src="images/aunt esther.webp" alt="Woman wearing a coordinated fashion outfit" loading="lazy">
             <figcaption>Pieces designed to move with you.</figcaption>
           </figure>
           <figure class="look">
-            <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=900&q=85" alt="Clothing collection displayed together" loading="lazy">
+            <img src="images/two ladies.webp" alt="Clothing collection displayed together" loading="lazy">
             <figcaption>Build your own She Blossoms look.</figcaption>
           </figure>
           <figure class="look">
-            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85" alt="Woman in a stylish layered outfit" loading="lazy">
+            <img src="images/black jacket.webp" alt="Woman in a stylish layered outfit" loading="lazy">
             <figcaption>Layer your message with confidence.</figcaption>
           </figure>
           <figure class="look">
-            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85" alt="Woman wearing a bright fashion look" loading="lazy">
+            <img src="images/woman of God.webp" alt="Woman wearing a bright fashion look" loading="lazy">
             <figcaption>Color, comfort, and sisterhood.</figcaption>
           </figure>
           <figure class="look">
-            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85" alt="Woman wearing a casual outfit" loading="lazy">
+            <img src="images/Brown jacket.webp" alt="Woman wearing a casual outfit" loading="lazy">
             <figcaption>Made for full days and open hearts.</figcaption>
           </figure>
           <figure class="look">
-            <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85" alt="Woman in a modern coordinated outfit" loading="lazy">
+            <img src="images/a lady.webp" alt="Woman in a modern coordinated outfit" loading="lazy">
             <figcaption>Show up as your whole self.</figcaption>
           </figure>
           <figure class="look">
-            <img src="https://images.unsplash.com/photo-1539109136881-208127e8633d?auto=format&fit=crop&w=900&q=85" alt="Woman wearing a statement outfit" loading="lazy">
+            <img src="images/ma mabes.webp" alt="Woman wearing a statement outfit" loading="lazy">
             <figcaption>Statement pieces for bold women.</figcaption>
           </figure>
           <figure class="look">
-            <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=85" alt="Woman wearing a casual top" loading="lazy">
+            <img src="images/man of God.webp" alt="Woman wearing a casual top" loading="lazy">
             <figcaption>Easy fits for everyday movement.</figcaption>
-          </figure>
-          <figure class="look">
-            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85" alt="Woman wearing a neutral outfit" loading="lazy">
-            <figcaption>Keep it simple. Keep it meaningful.</figcaption>
           </figure>
         </div>
       </div>
@@ -217,6 +237,21 @@
     </section>
   </div>
   <script>
+    const burger = document.getElementById("burger");
+    const nav = document.getElementById("nav");
+    burger.addEventListener("click", () => {
+      const open = nav.dataset.open === "true";
+      nav.dataset.open = String(!open);
+      burger.setAttribute("aria-expanded", String(!open));
+      burger.setAttribute("aria-label", open ? "Open menu" : "Close menu");
+    });
+    nav.addEventListener("click", event => {
+      if (event.target.closest("a") && window.innerWidth <= 940) {
+        nav.dataset.open = "false";
+        burger.setAttribute("aria-expanded", "false");
+        burger.setAttribute("aria-label", "Open menu");
+      }
+    });
     const MERCHANDISE_WHATSAPP = "2348081816585";
     document.getElementById("yr").textContent = new Date().getFullYear();
     const cart = [];

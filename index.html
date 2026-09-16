@@ -870,35 +870,6 @@
                                                     loading="lazy" alt="" class="icon-32"></div>
                                         </div>
                                     </a></div>
-                                <div role="listitem" class="w-dyn-item"><a data-w-id="eb2b6df3-efee-f05a-80e8-ec4e70f838b2"
-                                        href="teams/rachel-m-ortega.html" class="team-card w-inline-block"
-                                        style="will-change: transform, opacity; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;">
-                                        <div data-w-id="eb2b6df3-efee-f05a-80e8-ec4e70f838b3"
-                                            style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;"
-                                            class="team-top">
-                                            <div data-w-id="eb2b6df3-efee-f05a-80e8-ec4e70f838b4" class="img-bg"
-                                                style="will-change: transform, opacity; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;">
-                                                <img src="images/Apostle.webp" loading="lazy" alt="" sizes="100vw"
-                                                    class="img-cover"></div>
-                                        </div>
-                                        <div data-w-id="eb2b6df3-efee-f05a-80e8-ec4e70f838b6"
-                                            style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;"
-                                            class="team-bottom">
-                                            <div class="team-name">
-                                                <h2 data-w-id="eb2b6df3-efee-f05a-80e8-ec4e70f838b7"
-                                                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;"
-                                                    class="heading-style-h5">Apostle Chidi A Amanoh</h2>
-                                                <div data-w-id="eb2b6df3-efee-f05a-80e8-ec4e70f838b9"
-                                                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;"
-                                                    class="opacity-70">
-                                                    <div class="text-size-regular">Founder and Lead Pastor</div>
-                                                </div>
-                                            </div>
-                                            <div class="team-icon-bg"><img
-                                                    src="https://cdn.prod.website-files.com/68707b7e825be3e4f92d5c40/68707b7e825be3e4f92d5c5d_Weight%3DRegular.svg"
-                                                    loading="lazy" alt="" class="icon-32"></div>
-                                        </div>
-                                    </a></div>
                             </div>
                         </div>
                     </div>
@@ -998,6 +969,42 @@
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <!-- GIVING AND PAYMENT -->
+            <section class="section dark" id="give">
+  <div class="wrap">
+    <div class="give">
+      <div>
+        <h2>Give</h2>
+        <p class="lede">Partnership is how the food bank stays stocked, how the grants get funded, and how the conference stays free for every woman who walks in.</p>
+        <p>You can give once, or partner with us monthly. Monthly partners carry the work with us through the year, which is what lets us plan beyond the next event.</p>
+        <p><a class="btn" href="#" data-link="partner">Become a partner</a></p>
+        <ul class="tiers">
+          <li><b>Monthly</b> an amount you choose, given consistently</li>
+          <li><b>Corporate</b> sponsor the conference, a scholarship or a grant</li>
+        </ul>
+      </div>
+
+      <div class="account">
+        <div class="acct-row">
+          <span>Account name</span>
+          <b>Wordfeast Gospel Network - She Blossoms</b>
+        </div>
+        <div class="acct-row">
+          <span>Account number</span>
+          <div class="acct-num">
+            <b id="acct">5600799324</b>
+            <button class="copy" id="copyBtn" type="button">Copy</button>
+          </div>
+        </div>
+        <div class="acct-row" style="margin-bottom:0">
+          <span>Bank</span>
+          <b>Fidelity Bank</b>
+        </div>
+      </div>
+    </div>
+  </div>
             </section>
 
             <!-- TESTIMONIALS -->
@@ -1226,6 +1233,24 @@
         type="text/javascript"></script>
     <script src="https://cdn.prod.website-files.com/68707b7e825be3e4f92d5c40/js/webflow.b074a473.cc4c194e3a1beed2.js"
         type="text/javascript"></script>
+    <script>
+        const menuButton = document.querySelector(".nav_button");
+        const menu = document.querySelector(".nav_menu-items");
+        if (menuButton && menu) {
+            menuButton.addEventListener("click", () => {
+                const open = menu.classList.toggle("is-open");
+                menuButton.classList.toggle("w--open", open);
+                menuButton.setAttribute("aria-expanded", String(open));
+            });
+            menu.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    menu.classList.remove("is-open");
+                    menuButton.classList.remove("w--open");
+                    menuButton.setAttribute("aria-expanded", "false");
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>

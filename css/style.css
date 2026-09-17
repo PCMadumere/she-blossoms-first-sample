@@ -72,12 +72,6 @@ h1 {
     font-size: 2em
 }
 
-.index-hero-text {
-    font-family: 'Style Script', cursive;
-    font-size: 10rem;
-    letter-spacing: 20%;
-}
-
 mark {
     color: #000;
     background: #ff0
@@ -2753,6 +2747,35 @@ blockquote {
     font-size: 1.25rem;
 } */
 
+.text-color-white.index-hero-text {
+      letter-spacing: 0.5em;
+      font-size: 8rem;
+       font-weight: 700;
+      /* background: linear-gradient(90deg, #e4e2e2, #afaeac, #868788, #797b7e, #868585);
+  background-size: 200% auto;
+  
+   2. Clip the background to the text shapes
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  
+  
+  animation: shiftColors 5s linear infinite;
+  
+@keyframes shiftColors {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center; 
+  }
+  100% {
+    background-position: 0% center; 
+  } 
+} */
+}
+
 .heading-style-h3:where(.w-variant-076bd980-a339-3c70-8b71-30e74a294496) {
     display: none
 }
@@ -2783,10 +2806,6 @@ blockquote {
 .heading-style-h1.text-color-white {
     text-align: left;
     font-size: 3.5rem
-}
-
-.heading-style-h1.index-hero-text {
-    letter-spacing: 10%;
 }
 
 .heading-style-h1.text-color-white.index-hero-text {
@@ -2947,7 +2966,8 @@ blockquote {
 
 .text-color-white {
     color: var(--white);
-    font-family: Geist, sans-serif
+    font-family: 'Style Script', cursive;
+    font-size: 5rem;
 }
 
 .z-index-3 {
@@ -3342,6 +3362,10 @@ blockquote {
     position: absolute;
     inset: 0%;
     overflow: clip
+}
+
+.img-cover.ministers{
+    object-position: center top;
 }
 
 .img-cover:where(.w-variant-bb2cb373-3c63-1b02-119a-168cefc46cca),
@@ -4699,7 +4723,7 @@ h1 {
 .counter-number {
     justify-content: center;
     align-items: flex-start;
-    height: 3.2rem;
+    height: 3.7rem;
     display: flex;
     overflow: hidden
 }
@@ -6486,6 +6510,7 @@ h1 {
     z-index: 2;
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
+    letter-spacing: 10%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -7687,7 +7712,7 @@ h1 {
         height: 100vh;
         padding-top: 2rem;
         left: 0;
-        right: 0
+        right: 0;
     }
 
     .nav_button {
@@ -8665,6 +8690,12 @@ h1 {
         font-size: 3rem
     }
 
+    .text-color-white.index-hero-text {
+      letter-spacing: 0.3em;
+      font-size: 5rem;
+       font-weight: 400;
+    }
+
     .margin-top-56 {
         margin-top: 2.75rem
     }
@@ -8849,7 +8880,8 @@ h1 {
     }
 
     .testimonial-wrap {
-        flex-flow: row
+        flex-flow: row;
+        margin: 5rem;
     }
 
     .testimonial-content:where(.w-variant-ba5fcca0-ec0b-0295-2c86-4c1dbe435595) {
@@ -8882,7 +8914,7 @@ h1 {
         flex-flow: column-reverse wrap;
         justify-content: space-between;
         align-items: flex-start;
-        margin-bottom: 8rem
+        margin-bottom: 1rem
     }
 
     .footer_copyright-inner {
@@ -8989,12 +9021,12 @@ h1 {
     }
 
     .counter-number {
-        height: 3rem
+        height: 4rem;
     }
 
     .dummy-number,
     .real-number {
-        line-height: .9
+        line-height: 1.2
     }
 
     .section-project,
@@ -9286,7 +9318,8 @@ h1 {
     }
 
     .testimonial-author-wrap-secondary:where(.w-variant-ba5fcca0-ec0b-0295-2c86-4c1dbe435595) {
-        display: flex
+        display: flex;
+        margin: 0 2rem;
     }
 
     .about-head {
@@ -9409,6 +9442,10 @@ h1 {
 
     .slider_arrow.cc-down {
         right: 17%
+    }
+
+    .countdown-container {
+        margin: 0 auto;
     }
 
     .hero-image {
@@ -9603,6 +9640,11 @@ h1 {
         opacity: 1
     }
 
+    .img-cover.about{
+        object-fit: contain;
+        object-position: center;
+    }
+
     .img-cover:where(.w-variant-bb2cb373-3c63-1b02-119a-168cefc46cca) {
         display: none
     }
@@ -9740,8 +9782,12 @@ h1 {
         padding-right: 0%
     }
 
+    .countdown-container {
+        margin: 2rem;
+    }
+
     .nav_logo {
-        width: 10rem
+        width: 5rem
     }
 
     .footer-logo {
@@ -10063,7 +10109,8 @@ h1 {
     }
 
     .testimonial-author-wrap-secondary:where(.w-variant-ba5fcca0-ec0b-0295-2c86-4c1dbe435595) {
-        display: flex
+        display: flex;
+        margin: 0 2rem;
     }
 
     .about-head,

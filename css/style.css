@@ -9026,7 +9026,8 @@ h1 {
 
     .dummy-number,
     .real-number {
-        line-height: 1.2
+        line-height: 1.6;
+        font-size: 2rem;
     }
 
     .section-project,
@@ -9089,7 +9090,7 @@ h1 {
     .section-testimonial,
     .section-testimonial.background-color-white {
         padding-top: 3.125rem;
-        padding-bottom: 3.125rem
+        padding-bottom: .5rem
     }
 
     .opacity-70 {
@@ -9445,7 +9446,7 @@ h1 {
     }
 
     .countdown-container {
-        margin: 0 auto;
+        margin: 3rem auto;
     }
 
     .hero-image {
@@ -9643,6 +9644,7 @@ h1 {
     .img-cover.about{
         object-fit: contain;
         object-position: center;
+        margin: 0;
     }
 
     .img-cover:where(.w-variant-bb2cb373-3c63-1b02-119a-168cefc46cca) {
@@ -9783,7 +9785,7 @@ h1 {
     }
 
     .countdown-container {
-        margin: 2rem;
+        margin: 2rem auto;
     }
 
     .nav_logo {

@@ -3519,9 +3519,9 @@ blockquote {
 
 /* COUNTDOWN */
 
-.countdown-container {
+.countdown-section {
   text-align: center;
-margin: 6.5rem auto 4rem;
+margin: 4rem auto;
 }
 
 h1 {
@@ -9445,8 +9445,8 @@ h1 {
         right: 17%
     }
 
-    .countdown-container {
-        margin: 3rem auto;
+    .countdown-section {
+        margin: 2rem;
     }
 
     .hero-image {
@@ -9784,8 +9784,8 @@ h1 {
         padding-right: 0%
     }
 
-    .countdown-container {
-        margin: 2rem auto;
+    .countdown-section {
+        margin: 2rem;
     }
 
     .nav_logo {

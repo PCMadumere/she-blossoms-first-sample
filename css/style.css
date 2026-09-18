@@ -9449,6 +9449,9 @@ h1 {
         margin: 2rem;
     }
 
+    .countdown {
+gap: 33rem;}
+
     .hero-image {
         opacity: 100
     }
@@ -9787,6 +9790,11 @@ h1 {
     .countdown-section {
         margin: 2rem;
     }
+
+    .countdown {
+  justify-content: center;
+  gap: 2rem;
+}
 
     .nav_logo {
         width: 5rem
